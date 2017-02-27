@@ -21,11 +21,8 @@
     "oauth": "^0.9.14",
     "request": "^2.72.0",
     "trim": "0.0.1",
-    "forge-data-management": "*",
-    "forge-model-derivative": "*",
-    "forge-oauth2": "*",
-    "forge-oss": "*",
-    "forge-apis": "*"
+    "forge-apis": "*",
+    "jstree": "*"
   },
 
   "scripts": {
@@ -34,7 +31,7 @@
     "nodemon": "nodemon start.js --ignore www/"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "*"
   },
 
   "repository": {

@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
 // Copyright (c) Autodesk, Inc. All rights reserved
-// Written by Forge Partner Development 
+// Written by Forge Partner Development
 //
 // Permission to use, copy, modify, and distribute this software in
 // object code form for any purpose and without fee is hereby granted,
@@ -21,16 +21,18 @@
 module.exports = {
 
     // this this callback URL when creating your client ID and secret
-    callbackURL: 'https://murmuring-cove-16220.herokuapp.com/api/forge/callback/oauth',
+    callbackURL: 'http://localhost:3000/api/forge/callback/oauth', //'https://murmuring-cove-16220.herokuapp.com/api/forge/callback/oauth',
+
 
     // set enviroment variables or hard-code here
     credentials: {
-        client_id: process.env.FORGE_CLIENT_ID || 'c8TGgN1qfJPRRyqEr4oXGaKhLnPrN1Tr',
-        client_secret: process.env.FORGE_CLIENT_SECRET || 'Ag4uxZEzKfB5n7A2'
+        client_id: process.env.FORGE_CLIENT_ID || '',
+        client_secret: process.env.FORGE_CLIENT_SECRET || ''
     },
 
     // Required scopes for your application on server-side
-    scopeInternal: ['data:read'], // for forge-apis this needs to be an array
+    scopeInternal: ['data:read', 'data:write', 'data:create', 'data:search',
+        'bucket:create', 'bucket:read', 'bucket:update', 'bucket:delete'], // for forge-apis this needs to be an array
 // Required scope of the token sent to the client
     scopePublic: ['data:read']
 };
